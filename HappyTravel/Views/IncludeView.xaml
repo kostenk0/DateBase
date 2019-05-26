@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="HappyTravel.Views.IncludeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HappyTravel.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Pass number" Binding="{Binding }"></DataGridTextColumn>
+                <DataGridTextColumn Header="Hotel code" Binding="{Binding }"></DataGridTextColumn>
+                <DataGridTextColumn Header="Type of appartment" Binding="{Binding }"></DataGridTextColumn>
+                <DataGridTextColumn Header="Type of eating" Binding="{Binding }"></DataGridTextColumn>
+                <DataGridTextColumn Header="Date of settlement" Binding="{Binding }"></DataGridTextColumn>
+                <DataGridTextColumn Header="Date of eviction" Binding="{Binding }"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15" Content="Cancel" Command="{Binding CloseCommand}"/>
+    </Grid>
+</UserControl>

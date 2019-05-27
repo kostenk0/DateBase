@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="HappyTravel.Views.ClientsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HappyTravel.Views"
+        mc:Ignorable="d"
+        Height="450" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Grid.Row="0" Grid.ColumnSpan="2" ItemsSource="{Binding ViewSource.View}" Name="myGrid" Margin="0,0,-0.4,10" IsReadOnly="True"
+                      SelectedItem="{Binding SelectedProcess, Mode=TwoWay}"
+                      AutoGenerateColumns="False">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="Red" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.ContextMenu>
+                <ContextMenu IsEnabled="{Binding IsControlEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+                    <MenuItem Command="{Binding ModulesShow}" Header="Modules"/>
+                    <MenuItem Command="{Binding ThreadsShow}" Header="Threads"/>
+                    <MenuItem Command="{Binding ToFolder}" Header="Folder"/>
+                    <MenuItem Command="{Binding Terminate}" Header="Terminate"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Client code" Binding="{Binding ClientCode}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Pasport number" Binding="{Binding PasportNumber}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Surname" Binding="{Binding Surname}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Fathers name" Binding="{Binding FathersName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Birth date" Binding="{Binding BirthDate, StringFormat={}{0:MM/dd/yyyy}}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Age" Binding="{Binding Age}"></DataGridTextColumn>
+                <DataGridTextColumn Header="E-mail" Binding="{Binding Email}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="100, 15, 100, 15" Content="Add" Command="{Binding AddCommand}"/>
+        <Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="100, 15, 100, 15" Content="Close" Command="{Binding CloseCommand}"/>
+    </Grid>
+</UserControl>

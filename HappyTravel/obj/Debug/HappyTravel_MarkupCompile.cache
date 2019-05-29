@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Vladislav\Desktop\DateBase-master\HappyTravel\obj\Debug\
+C:\Users\Yaroslav\source\repos\HappyTravel-master\HappyTravel\obj\Debug\
 HappyTravel
 none
 false
 DEBUG;TRACE
-C:\Users\Vladislav\Desktop\DateBase-master\HappyTravel\App.xaml
+C:\Users\Yaroslav\source\repos\HappyTravel-master\HappyTravel\App.xaml
 15-2105751624
 
 502122971852
-14-664729477
+14-257567928
 MainWindow.xaml;Views\AddWindows\AddClientView.xaml;Views\Authentication\SignInView.xaml;Views\Authentication\SignUpView.xaml;Views\ClientsView.xaml;Views\ContactPersonView.xaml;Views\ContractView.xaml;Views\HotelView.xaml;Views\IncludeView.xaml;Views\MainViewManager.xaml;Views\PassView.xaml;Views\PhoneNumberView.xaml;Views\ResortView.xaml;Views\TicketView.xaml;Views\TripView.xaml;
 
 False

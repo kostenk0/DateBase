@@ -32,7 +32,7 @@
         <Label Grid.Row="3" Height="30">Father's name:</Label>
         <TextBox Grid.Row="3" Grid.ColumnSpan="2" Height="20" Margin="85, 5, 5, 5" Text="{Binding FathersName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
         <Label Grid.Row="4" Height="30">Date of birth:</Label>
-        <DatePicker Grid.Row="4" Grid.ColumnSpan="2" Height="25" Margin="80, 5, 5, 5" Text="{Binding BirthDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></DatePicker>
+        <DatePicker Grid.Row="4" Grid.ColumnSpan="2" Height="25" Margin="80, 5, 5, 5" Text="{Binding BirthDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FirstDayOfWeek="Monday" SelectedDateFormat="Long"></DatePicker>
         <Label Grid.Row="5" Height="30">E-mail:</Label>
         <TextBox Grid.Row="5" Grid.ColumnSpan="2" Height="20" Margin="45, 5, 5, 5" Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
         <Label Grid.Row="6" Height="30">Phone number:</Label>
